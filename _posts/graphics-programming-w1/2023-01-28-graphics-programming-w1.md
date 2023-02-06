@@ -5,19 +5,19 @@ published: true
 
 ## Background
 
-I think the break between semesters has given me time to think about the type of programming I'm doing. Over the last two years, most of my focus in programming has been in web development even though this isn't the field of computer science I was always interested in. For as long as I've been coding, I've wanted to make games. I've always watched game developers on YouTube, especially [ThinMatrix](https://www.youtube.com/user/thinmatrix) and [Randy](https://www.youtube.com/@bigrando420), and the creative process is something that seems extremely satisfying to work on. Even though I've tried many times over the years and used countless engines and frameworks. I don't have much to show for it besides a few demos and some small games. However, I feel that I've gained enough experience with programming to really tackle the field of graphics programming.
+I think the break between semesters has given me time to think about the type of programming I'm doing. Over the last two years, most of my focus in programming has been in web development even though this isn't the field of computer science I was always interested in. For as long as I've been coding, I've wanted to make games, and more recently, game tooling. I've always watched game developers on YouTube, especially [ThinMatrix](https://www.youtube.com/user/thinmatrix) and [Randy](https://www.youtube.com/@bigrando420), and the creative process is something that seems extremely satisfying to work on. Even though I've tried many times over the years and used countless engines and frameworks. I don't have much to show for it besides a few demos and some small games. However, I feel now that I've gained enough experience with programming to really tackle the field of graphics programming.
 
-I was inspired in large part to really commit to this field of programming by a book I read recently. This was the first book I'd read for almost 6 years, but it was a novel called ["Tomorrow, and Tomorrow, and Tomorrow"](https://gabriellezevin.com/tomorrowx3/) by Gabrielle Zevin about two game programmers and their relationship over the course of multiple decades. The book is fantastic, but one quote really convinced me that this was the right choice: "Never use someone else's engine. You cede too much power to them". I think the quote is a bit too deep, but the main sentiment is still there. That's why I think learning graphics programming at a low level rather than using a pre-existing engine to build is the right choice for learning.
+I was inspired in large part to really commit to this field of programming by a book I read recently. This was the first book I'd read in a very long time, but it was a novel called ["Tomorrow, and Tomorrow, and Tomorrow"](https://gabriellezevin.com/tomorrowx3/) by Gabrielle Zevin about two game programmers and their relationship over the course of multiple decades. The book is fantastic, but one quote really convinced me that this was the right choice: "Never use someone else's engine. You cede too much power to them". I think the quote is probably a bit too deep, but the main sentiment exists. That's why I think learning graphics programming at a low level rather than using a pre-existing engine to build is the right choice for learning.
 
-I would be happier build a game engine than a game.
+I would rather build a game engine than a game.
 
 ## Choosing Go and OpenGL
 
 I've tried to learn OpenGL many times over the years, but I accepted that at this point, I'm still a beginner and I needed to start from the very first lesson. I also knew that no matter what language I chose to use, LearnOpenGL would be the right resource even though it's written for C++.
 
-Although I know a decent amount, I don't think my C++ is at a high enough level to extract all the performance benefits of using it. I think I'd be spending a lot more time if I went down this route. I even thought about using C# and OpenTK, getting a triangle rendering in the process, but I didn't love using it on a Mac and I couldn't make it work well with Vim.
+Although I know a decent amount, I don't think my C++ is at a high enough level to extract all the performance benefits of using it. I think I'd be spending a lot more time if I went down this route. I even thought about using `C#` and [`OpenTK`](https://opentk.net/learn/), getting a triangle rendering in the process, but I didn't love using it on a Mac and I couldn't make it work well with Vim.
 
-So, I started building the graphics engine in Java using [LWJGL](https://www.lwjgl.org/). I followed {{TheCherno}}'s OpenGL course on YouTube and followed along since the OpenGL bindings were the same. However, somewhere along the line, the thought of using Go popped into my head.
+So, I started building the graphics engine in Java using [LWJGL](https://www.lwjgl.org/). I followed [TheCherno](https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw)'s OpenGL course on YouTube and followed along since the OpenGL bindings were the same. However, somewhere along the line, the thought of using Go popped into my head.
 
 I think that there are a lot of benefits to me personally for making the choice to switch to Go. From a coding perspective, I get much faster compile times, easier package management, and for flexible paradigms. It also runs way faster than Java. However, Go and OpenGL is not an area that's particularly well-document, and I think this will be really good for my learning. In a week, I've already spent countless hours of documentation, found code from an old commit and uploaded it as a package, and really invested effort into it. I think in the end I made the right decision and I can't wait to learn more.
 
@@ -59,13 +59,13 @@ func main() {
 }
 ```
 
-I finally had it: a triangle:
+The code in the render loop itself is pretty much the same as in any other language. In oredr to get anything rendering, I had to set up vertex buffer, vertex array objects, and shaders. Then, I finally had it: a triangle:
 
 <figure>
 <img src="/graphics-programming-w1/triangle.png" alt="installing nginx in ubuntu">
 </figure>
 
-I even had a rectangle and textures working. This process was getting a little complicated and difficult gettin used to. There are a lot of buffers and other processes that need to be set before anything can be done, and doing something wrong often doesn't yield helpful error messages.
+I even had a rectangle and textures working after working with index buffers and texture coordinates. This process was getting a little complicated and difficult gettin used to. There are a lot of buffers and other processes that need to be set before anything can be done, and doing something wrong often doesn't yield helpful error messages.
 
 <figure>
 <img src="/graphics-programming-w1/fragmentwithlogo.png" alt="installing nginx in ubuntu">
