@@ -209,3 +209,5 @@ Also drew up a mascot logo for when I finally abstract a full engine out of the 
 <figure>
 <img class="no-top" src="/graphics-programming-w2/mango.png" alt="installing nginx in ubuntu">
 </figure>
+
+You can follow the development of the engine [here](htts://www.github.com/micahke/go-graphics-engine).
